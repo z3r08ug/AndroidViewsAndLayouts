@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -8,22 +9,25 @@
 
     <!-- Create a button to go to the second activity-->
     <Button
-        android:text="Go to second"
+        android:text="Check Developer Site"
         android:onClick="goToSecondActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
+        android:hint="First Name"
         android:id="@+id/etFirstName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <EditText
+        android:hint="Last Name"
         android:id="@+id/etLastName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
+        android:text="Save Person"
         android:onClick="savePersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -31,7 +35,7 @@
     <TextView
         android:textSize="20sp"
         android:textColor="@android:color/holo_purple"
-        android:id="@+id/evPersonName"
+        android:id="@+id/tvPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     ,
