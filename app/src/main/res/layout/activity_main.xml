@@ -27,10 +27,10 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:text="Save Person"
+        android:text="@string/savePerson"
         android:onClick="savePersonName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
 
     <TextView
         android:textSize="20sp"

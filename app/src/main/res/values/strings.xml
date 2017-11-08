@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidViewsAndLayouts</string>
+    <string name="savePerson">Save Person</string>
 </resources>
