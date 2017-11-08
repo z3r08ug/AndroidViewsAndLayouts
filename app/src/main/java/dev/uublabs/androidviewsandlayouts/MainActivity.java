@@ -10,6 +10,10 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -19,6 +23,7 @@ public class MainActivity extends AppCompatActivity
     private EditText etFirstName;
     private EditText etLastName;
     private TextView tvPersonName;
+    private List<Person> personList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -27,6 +32,9 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         bindViews();
+
+
+        personList = new ArrayList<>();
     }
 
     private void bindViews()
@@ -46,6 +54,17 @@ public class MainActivity extends AppCompatActivity
 
     public void savePersonName(View view)
     {
+        String firstName = etFirstName.getText().toString();
+        String lastName = etLastName.getText().toString();
 
+        Person person = new Person(firstName, lastName);
+        personList.add(person);
+
+        Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show();
+    }
+
+    public void displayPersons(View view)
+    {
+        tvPersonName.setText(personList.toString());
     }
 }
