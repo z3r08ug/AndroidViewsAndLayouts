@@ -37,6 +37,11 @@ public class Person
 
     @Override
     public String toString() {
-        return "Person{" + getFirstName() + " " + getLastName() + "}";
+        return "Person{" + getFirstName() + " " + getLastName() + "}\n";
+    }
+
+    public String getFullName()
+    {
+        return firstName + " " + lastName;
     }
 }

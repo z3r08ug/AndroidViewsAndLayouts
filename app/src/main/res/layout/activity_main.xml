@@ -7,6 +7,11 @@
     android:layout_height="match_parent"
     tools:context="dev.uublabs.androidviewsandlayouts.MainActivity">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <!-- Create a button to go to the second activity-->
     <Button
         android:text="Check Developer Site"
@@ -44,7 +49,54 @@
         android:id="@+id/tvPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-    ,
 
+    </LinearLayout>
+
+    <!--display latest person object-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="Display Newest"
+            android:id="@+id/displayNewestPerson"
+            android:onClick="displayNewestPerson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="First Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvNewPersonFirstName"
+            android:layout_below="@id/displayNewestPerson"
+            android:layout_toRightOf="@id/displayNewestPerson"/>
+
+        <TextView
+            android:text="Last Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvNewPersonLastName"
+            android:layout_below="@id/tvNewPersonFirstName"
+            android:layout_toLeftOf="@id/tvNewPersonFirstName"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_gravity="center"
+            android:textSize="@dimen/headingTextSize"
+            android:textColor="@android:color/holo_purple"
+            android:id="@+id/tvPersonFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
 
 </LinearLayout>
